@@ -1,0 +1,8 @@
+# Windows & editor
+Thumbs.db
+.DS_Store
+*.log
+*.tmp
+
+# Docker
+**/.env

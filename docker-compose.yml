@@ -1,15 +1,12 @@
 ﻿services:
   nginx:
     image: nginx:alpine
-    container_name: nginx
+    container_name: cci-nginx
     ports:
       - "8080:80"
     volumes:
-      - ./nginx/conf.d:/etc/nginx/conf.d:ro
-      - ./nginx/html:/usr/share/nginx/html:ro
-    healthcheck:
-      test: ["CMD", "wget", "-qO-", "http://localhost"]
-      interval: 10s
-      timeout: 3s
-      retries: 5
+      # 方式A：只挂默认站点配置文件
+      - ./src/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+      # 方式B（可选）：同时挂站点静态页面目录
+      - ./src/html:/usr/share/nginx/html:ro
     restart: unless-stopped

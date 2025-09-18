@@ -1,6 +1,8 @@
-ï»¿# SOPï¼ˆæœ¬åœ°éªŒè¯ï¼‰
-1) docker compose up -d
-2) curl -I http://localhost:8080     # 200 OK
-3) docker ps                         # æœ‰ nginx:alpineï¼ŒçŠ¶æ€ Up
-4) æµè§ˆå™¨æ‰“å¼€ http://localhost:8080
-5) åœæ­¢ï¼šdocker compose down
+# ÔËÎ¬SOP
+## ÆôÍ£
+- Æô¶¯: `./scripts/up.ps1`
+- Í£Ö¹: `./scripts/down.ps1`
+- ²é¿´ÈÕÖ¾: `./scripts/logs.ps1`
+## ³£¼û¼ì²é
+- `docker ps`
+- `curl.exe -I http://localhost:8080`
